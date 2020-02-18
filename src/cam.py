@@ -1,7 +1,7 @@
 import cv2 as cv
 
 cap = cv.VideoCapture(0)
-face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
+face_cascade = cv.CascadeClassifier('../haarcascades/haarcascade_frontalface_default.xml')
 fourcc = cv.VideoWriter_fourcc(*'XVID')
 out = cv.VideoWriter('me.avi', fourcc, 20.0, (640, 480))
 

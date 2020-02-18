@@ -1,8 +1,8 @@
 import cv2 as cv
 
-face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
-eye_cascade = cv.CascadeClassifier('haarcascade_eye.xml')
-image = cv.imread('face.jpg')
+face_cascade = cv.CascadeClassifier('../haarcascades/haarcascade_frontalface_default.xml')
+eye_cascade = cv.CascadeClassifier('../haarcascades/haarcascade_eye.xml')
+image = cv.imread('../images/face.jpg')
 gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 faces = face_cascade.detectMultiScale(gray, 1.3, 5)
 for (x,y,w,h) in faces:
